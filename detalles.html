@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/detalles.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+
+
+
+  </head>
+  <body>
+    <div class="container2">
+      <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Inicio</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="buscar.html">Buscar <i class="fa fa-search" aria-hidden="true"></i> </a></li>
+            <li><a href="#">Mapa <i class="fa fa-map" aria-hidden="true"></i> </a></li>
+            <li><a href="#">Notificaciones <i class="fa fa-bell" aria-hidden="true"></i> </a></li>
+            <li><a href="#">Usuarios <i class="fa fa-user" aria-hidden="true"></i> </a></li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    </div>
+
+    <div class="container" style="margin-bottom:100px;">
+    <div class="row" style="height:600px;">
+      <img src="img1.jpeg" class="img img-responsive" style="height:100%;  width:100%;">
+    </div>
+    <h2 class="titulo text-center">Villa Bonita</h2>
+    <h3 class="descrAll text-center">Villa Bonita se distingue por estar a un lado del Bosque de la Primavera</h3>
+    <h3 class="descrAll text-center">Deleitese admirando sus increibles áreas de entretenimiento</h3>
+    <h3 class="descrAll text-center"> con 220 m2 de espacio </h3>
+    <br>
+    <div class="row">
+      <div class="col-md-2">
+        <i class="fa fa-bed fa-3x" aria-hidden="true"> 4</i>
+      </div>
+      <div class="col-md-2">
+        <i class="fa fa-car fa-3x" aria-hidden="true">4</i>
+      </div>
+      <div class="col-md-2">
+        <i class="fa fa-bath fa-3x" aria-hidden="true">4</i>
+      </div>
+      <div class="col-md-2">
+        <i class="fa fa-bed fa-3x" aria-hidden="true"> 4</i>
+      </div>
+      <div class="col-md-2">
+        <i class="fa fa-car fa-3x" aria-hidden="true">4</i>
+      </div>
+      <div class="col-md-2">
+        <i class="fa fa-bath fa-3x" aria-hidden="true">4</i>
+      </div>
+
+      <div class="col-md-12">
+        <h3 class="precio text-center"> MN 3'500,000</h3>
+      </div>
+
+      <div class="col-md-12">
+        <h3 class="telefono"> LLAMAR </h3>
+        <img class="img" src="phone.png" style="width:40px;height:40px;"></img>
+      </div>
+
+    </div>
+    <h3 style="">Ubicación:</h3>
+    <div id="map" style="width:100%;height:400px;"></div>
+
+<script>
+
+function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 15
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB075asZryvQLvlFql8Cv6jB9sij1RCk0k&callback=initMap"></script>
+
+
+    </div>
+  </body>
+</html>

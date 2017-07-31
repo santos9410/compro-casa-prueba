@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+
+
+
+  </head>
+  <body>
+    <div class="container2">
+      <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Inicio</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="buscar.html">Buscar <i class="fa fa-search" aria-hidden="true"></i> </a></li>
+            <li><a href="#">Mapa <i class="fa fa-map" aria-hidden="true"></i> </a></li>
+            <li><a href="#">Notificaciones <i class="fa fa-bell" aria-hidden="true"></i> </a></li>
+            <li><a href="#">Usuarios <i class="fa fa-user" aria-hidden="true"></i> </a></li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    </div>
+
+    <div class="container">
+      <h3 class="text-center" style="color:#324C5A!important;font-size:30px;">Filtros</h3>
+      <form class="form-horizontal" style="width:55%; margin: 0 auto; margin-top:30px;">
+
+        <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Principal:</label>
+        <div class="col-sm-10">
+          <div class="col-sm-5">
+            <label class="radio-inline">
+              <input type="radio" name="pr1" id="inlineRadio1" value="option1" checked> House
+            </label>
+          </div>
+          <div class="col-sm-5">
+          <label class="radio-inline">
+            <input type="radio" name="pr1" id="inlineRadio2" value="option2"> Apartament
+          </label>
+        </div>
+
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-top:30px;">
+      <label class="control-label col-sm-2" for="email">Precio:</label>
+      <div class="col-sm-10">
+        <div class="col-sm-10">
+            <input type="range" name="range" min="100000" max="900000" value="500000" onchange="rangeSuccess.value=value" style="margin-top:10px;">
+          </div>
+          <div class="col-sm-2">
+            <output id="rangeSuccess">500000</output>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="form-group" style="margin-top:30px;">
+    <label class="control-label col-sm-2" for="email">Total Área:</label>
+    <div class="col-sm-10">
+      <div class="col-sm-10">
+          <input type="range" name="range" min="0" max="200" value="0" onchange="rangeSuccessTl.value=value" style="margin-top:10px;">
+        </div>
+        <div class="col-sm-2">
+          <output id="rangeSuccessTl">0</output>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:60px;">Caracteristicas</h3>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">Cuartos:</label>
+      <div class="col-sm-10">
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="cuartos1" id="inlineRadio1" value="option1" checked> 1
+          </label>
+        </div>
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="cuartos1" id="inlineRadio2" value="option2"> 2
+          </label>
+        </div>
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="cuartos1" id="inlineRadio2" value="option2"> 3
+          </label>
+        </div>
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="cuartos1" id="inlineRadio2" value="option2"> 4
+          </label>
+        </div>
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="cuartos1" id="inlineRadio2" value="option2"> 5 ó +
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" style="margin-top:30px;">
+      <label class="control-label col-sm-2">Baños:</label>
+      <div class="col-sm-10">
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="banios1" id="inlineRadio1" value="option1" checked> 1
+          </label>
+        </div>
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="banios1" id="inlineRadio2" value="option2"> 2
+          </label>
+        </div>
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="banios1" id="inlineRadio2" value="option2"> 3
+          </label>
+        </div>
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="banios1" id="inlineRadio2" value="option2"> 4
+          </label>
+        </div>
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="banios1" id="inlineRadio2" value="option2"> 5 ó +
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" style="margin-top:30px;">
+      <label class="control-label col-sm-2">Medios Baños:</label>
+      <div class="col-sm-10">
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="banios2" id="inlineRadio1" value="option1" checked> 1
+          </label>
+        </div>
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="banios2" id="inlineRadio2" value="option2"> 2
+          </label>
+        </div>
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="banios2" id="inlineRadio2" value="option2"> 3
+          </label>
+        </div>
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="banios2" id="inlineRadio2" value="option2"> 4
+          </label>
+        </div>
+        <div class="col-sm-2">
+          <label class="radio-inline">
+            <input type="radio" name="banios2" id="inlineRadio2" value="option2"> 5 ó +
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" style="margin-top:30px;">
+    <div class="col-lg-offset-5 col-lg-5 col-sm-12">
+      <button type="submit" class="btn btn-success">Buscar </button>
+    </div>
+
+    </form>
+    </div>
+  </body>
+</html>

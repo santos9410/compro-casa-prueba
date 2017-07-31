@@ -1,0 +1,21 @@
+
+.titulo {
+  color: #3299b0;
+  font-size: 60px;
+}
+
+.carousel-caption {
+  /*background-color:#88958D;*/
+  background: #324C5A;
+  width: 100%;
+  opacity: 0.7;
+  left: 0 !important;
+}
+
+.desc {
+  /*color:*/
+}
+
+.descrAll {
+  color: #19647E;
+}

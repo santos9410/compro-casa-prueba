@@ -1,0 +1,14 @@
+.precio {
+  background: #21D17C;
+  width: 200px;
+  text-align: center;
+  display: block;
+  margin:  0 auto;
+  margin-top:30px;
+  padding: 20px;
+}
+
+.telefono {
+  color: rgb(47, 125, 205) !important;
+  /*margin: 0 0;*/
+}
